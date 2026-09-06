@@ -1,5 +1,26 @@
 # Execution State
 
+## Post-local-qualification portability hardening
+
+On 2026-09-06, an accidental invocation of the Linux single-node bootstrap from Windows/WSL
+exposed a real fail-open portability defect: unverified `python3` could create the Windows-named
+environment with Python 3.10 before the heavyweight Torch/CUDA download. This follow-up hardening
+does not alter any qualified performance artifact. Commit `0746ebf` and tag
+`local-qualified-20260906` remain the qualified local baseline.
+
+All authoritative Linux entry points now share a native-Linux/WSL, required-tool, positive GPU
+request, visible-GPU-count, and free-disk preflight. The bootstrap selects Python 3.12, then 3.11,
+then another verified Python >=3.11; it validates both the selected interpreter and created
+`.venv-linux-core` before pip runs. WSL is fail-closed with `SKIP_UNSUPPORTED` and
+`NON_AUTHORITATIVE_PREFLIGHT`, never distributed PASS. The nccl-tests build and runtime remain
+locked to `b4d5beebca8a76cf01335f724d154b9b9d394d96`, whose build and JSON argument contracts were
+rechecked against NVIDIA's source at that exact revision.
+
+No CUDA model benchmark or distributed qualification ran during this pass. Ruff, mypy, all 45
+pytest tests, Git Bash `bash -n`, PowerShell parsing, and sdist/wheel build passed. The accidentally
+cross-created `.venv-core` metadata was repaired locally with Windows Python 3.11 without a package
+download; its existing Torch 2.14.0+cu132 install remained intact.
+
 Recovered after the 2026-09-06 unexpected shutdown. The recovery audit was read-only until this
 state was written. Both the shell location and normalized Git root were
 `C:\Users\bjw-0\Downloads\nccl-guard`.
@@ -61,13 +82,14 @@ Current phase: local completion with external distributed gates.
 
 Last successful command: build, clean-wheel CLI/import smoke, and final artifact integrity audit.
 
-Final quality gate: Ruff PASS, mypy PASS across 49 source modules, pytest 38 PASS, sdist/wheel
+Final quality gate: Ruff PASS, mypy PASS across 49 source modules, pytest 45 PASS, sdist/wheel
 build PASS, clean-wheel CLI/import smoke PASS, Linux shell syntax PASS, PowerShell syntax PASS.
 
 Closure process audit found and stopped only the two exact Python PIDs orphaned by the interrupted
 combined wheel-smoke command. Separate wheel entry-point and import checks passed, and no unrelated
 process was touched.
 
-Next command: execute the single-node Linux runbook on an exclusive 2/4/8-GPU NCCL host.
+Next command: from Bash on an exclusive native Linux 2/4/8-GPU NCCL host, execute
+`GPUS_PER_NODE=<count> bash scripts/linux/bootstrap_single_node.sh`.
 
 Planner freeze: `CREATED`; final confirmation: `NOT_STARTED`.

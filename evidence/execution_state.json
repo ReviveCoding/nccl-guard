@@ -90,8 +90,8 @@
     "damaged_files": 0,
     "active_prior_python_or_cuda_processes": 0
   },
-  "last_successful_command": "build plus clean-wheel CLI/import smoke and final artifact integrity audit",
-  "next_command": "bash scripts/linux/run_single_node_8gpu.sh on an exclusive Linux NCCL host",
+  "last_successful_command": "post-qualification portability hardening quality and package checks",
+  "next_command": "GPUS_PER_NODE=<count> bash scripts/linux/bootstrap_single_node.sh from Bash on an exclusive native Linux NCCL host",
   "environment": {
     "python": "3.11.9",
     "torch": "2.14.0+cu132",
@@ -105,7 +105,7 @@
   "quality": {
     "ruff": "PASS",
     "mypy_modules": 49,
-    "pytest_tests": 38,
+    "pytest_tests": 45,
     "build": "PASS",
     "clean_wheel_smoke": "PASS",
     "linux_shell_syntax": "PASS",
@@ -123,6 +123,17 @@
     {"scope": "Criteo bounded acquisition", "status": "SKIP_RESOURCE_BUDGET"},
     {"scope": "TorchTitan", "status": "SKIP_NEEDS_CREDENTIALS"}
   ],
+  "post_local_qualification_portability_hardening": {
+    "date": "2026-09-06",
+    "status": "PASS",
+    "qualified_baseline_commit": "0746ebf426e9ad81d04631565c7f016efedafda8",
+    "qualified_baseline_tag": "local-qualified-20260906",
+    "qualified_performance_evidence_modified": false,
+    "cuda_or_distributed_benchmarks_rerun": false,
+    "authoritative_distributed_execution": "SKIP_UNSUPPORTED",
+    "linux_venv": ".venv-linux-core",
+    "nccl_tests_revision": "b4d5beebca8a76cf01335f724d154b9b9d394d96"
+  },
   "planner_freeze_state": "CREATED",
   "final_confirmation_state": "NOT_STARTED"
 }

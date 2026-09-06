@@ -24,6 +24,8 @@ Status: completed after local execution. No unresolved actionable CRITICAL or HI
 | MEDIUM | Nsight wrapper profiled a metadata gate and nccl-tests defaulted to `master`. | Nsight now wraps torchrun; nccl-tests requires an exact revision. |
 | MEDIUM | Doctor conflated importability with execution capability. | Package entries now record `importable` and `execution_verified` separately. |
 | MEDIUM | TPE repeated suggestions could be counted as new configuration evaluations. | Budget now counts unique configurations over one stable Optuna space. |
+| HIGH | Linux bootstrap could select Python 3.10, reuse the Windows-named venv, and begin multi-GB dependency installation before rejecting the project. | Added a shared fail-closed native-Linux preflight, ordered Python 3.12/3.11/verified fallback selection, pre-install version/GPU/tool/disk checks, WSL rejection, and `.venv-linux-core` separation. |
+| HIGH | Linux launchers could enter authoritative qualification from WSL or a Windows Bash context and could run an unpinned nccl-tests checkout. | Every Linux build/launch entry point now shares the authoritative-host guard; WSL emits `SKIP_UNSUPPORTED` and `NON_AUTHORITATIVE_PREFLIGHT`, while build and runtime enforce the exact pinned commit. |
 
 Audited: root boundary, CUDA fallback, batch arithmetic, strong/weak definitions, TP divisibility,
 TP-before-FSDP2, bottom-up FSDP2, optimizer order, canonical state, RoPE/causal mask/vocabulary,
@@ -31,6 +33,12 @@ SEARCH/EVALUATION isolation, planner visibility/freeze, exhaustive-reference wor
 rank-local ECR union, collective comparability, launch-level statistics, thermal state, exclusive
 authoritative runs, DCP application state, sample remapping, bounded downloads/licenses, TorchRec
 fairness, TorchTitan isolation, SKIP semantics, hashes, portability, and docs.
+
+Post-local-qualification portability review preserved commit `0746ebf` and tag
+`local-qualified-20260906`; no qualified performance evidence or planner scientific configuration
+was changed, and no CUDA/distributed benchmark was rerun. Regression coverage exercises Python
+3.10 rejection, Python >=3.11 acceptance, WSL rejection, GPU-count mismatch, Linux venv isolation,
+the exact nccl-tests pin, and shell/runbook consistency.
 
 Remaining MEDIUM external limitations: no Linux multi-GPU/NCCL execution, no Nsight ECR_AUTH, no
 executed elastic E10, no Criteo bounded rows, no TorchRec/TorchTitan/TorchComms compatible local
