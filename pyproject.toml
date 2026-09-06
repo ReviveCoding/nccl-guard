@@ -36,4 +36,4 @@ warn_unused_ignores = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q --basetemp=build/pytest"
+addopts = "-q --basetemp=.pytest-tmp"
