@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "ecr_kind": "ECR_APPROX",
+  "trace": "artifacts\\local-profiler-626bc5f6\\trace.json",
+  "sha256_manifest": "artifacts\\local-profiler-626bc5f6\\sha256_manifest.json"
+}

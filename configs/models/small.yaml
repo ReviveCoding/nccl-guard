@@ -1,0 +1,7 @@
+name: small
+layers: 12
+hidden: 768
+heads: 12
+ffn: 3072
+vocab_size: 50304
+sequence_lengths: [512, 2048, 4096]

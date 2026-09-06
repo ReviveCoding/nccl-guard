@@ -1,0 +1,4 @@
+experiment: E10
+fault: rank_failure
+restarts: 1
+same_world_size_required: true

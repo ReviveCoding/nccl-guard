@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "evidence_kind": "DETERMINISTIC_OFFLINE_PROTOCOL_SIMULATION",
+  "performance_claim": false,
+  "candidate_count": 12,
+  "search_pool_seed": 1001,
+  "evaluation_pool_seed": 2003,
+  "evaluation_configs_materialized": [
+    "ddp-m1-g8",
+    "ddp-m2-g4",
+    "ddp-m8-g1",
+    "fsdp2-m4-g2",
+    "fsdp2-m8-g1"
+  ],
+  "guard_candidate_budget": 3,
+  "guard_proposals": [
+    "ddp-m1-g8",
+    "fsdp2-m1-g8",
+    "ddp-m2-g4"
+  ],
+  "selected": {
+    "strong_default": "ddp-m1-g8",
+    "exhaustive_search_reference": "ddp-m8-g1",
+    "guard_at_3": "ddp-m2-g4",
+    "random_at_3_preregistered_seed_17": "fsdp2-m4-g2",
+    "tpe_at_8_preregistered_seed_17": "fsdp2-m8-g1"
+  },
+  "evaluation_pool_selected_only": {
+    "strong_default": 89.12779221708863,
+    "exhaustive_search_reference": 105.52056312029003,
+    "guard_at_3": 90.64690183067927,
+    "random_at_3_preregistered_seed_17": 95.48181792378162,
+    "tpe_at_8_preregistered_seed_17": 103.73674316103406
+  },
+  "guard_exhaustive_search_reference_gap": 0.14095509775336654,
+  "random_selected_distribution": {
+    "0": "fsdp2-m4-g2",
+    "1": "ddp-m4-g2",
+    "2": "ddp-m2-g4",
+    "3": "ddp-m8-g1",
+    "4": "ddp-m8-g1",
+    "5": "tp2-fsdp-m2-g4",
+    "6": "fsdp2-m8-g1",
+    "7": "ddp-m4-g2",
+    "8": "ddp-m8-g1",
+    "9": "fsdp2-m8-g1",
+    "10": "fsdp2-m4-g2",
+    "11": "fsdp2-m8-g1",
+    "12": "fsdp2-m8-g1",
+    "13": "ddp-m4-g2",
+    "14": "tp2-fsdp-m2-g4",
+    "15": "ddp-m8-g1",
+    "16": "fsdp2-m8-g1",
+    "17": "fsdp2-m4-g2",
+    "18": "fsdp2-m8-g1",
+    "19": "ddp-m1-g8"
+  },
+  "tpe_selected_distribution": {
+    "3": {
+      "0": "ddp-m8-g1",
+      "1": "tp2-fsdp-m2-g4",
+      "2": "fsdp2-m1-g8",
+      "3": "fsdp2-m4-g2",
+      "4": "fsdp2-m8-g1",
+      "5": "ddp-m8-g1",
+      "6": "ddp-m8-g1",
+      "7": "tp2-fsdp-m2-g4",
+      "8": "tp2-fsdp-m2-g4",
+      "9": "ddp-m4-g2",
+      "17": "fsdp2-m8-g1"
+    },
+    "5": {
+      "0": "ddp-m8-g1",
+      "1": "tp2-fsdp-m2-g4",
+      "2": "ddp-m4-g2",
+      "3": "fsdp2-m4-g2",
+      "4": "fsdp2-m8-g1",
+      "5": "ddp-m8-g1",
+      "6": "ddp-m8-g1",
+      "7": "tp2-fsdp-m2-g4",
+      "8": "tp2-fsdp-m2-g4",
+      "9": "ddp-m4-g2",
+      "17": "fsdp2-m8-g1"
+    },
+    "8": {
+      "0": "ddp-m8-g1",
+      "1": "ddp-m8-g1",
+      "2": "ddp-m8-g1",
+      "3": "fsdp2-m8-g1",
+      "4": "fsdp2-m8-g1",
+      "5": "ddp-m8-g1",
+      "6": "ddp-m8-g1",
+      "7": "fsdp2-m8-g1",
+      "8": "fsdp2-m4-g2",
+      "9": "ddp-m8-g1",
+      "17": "fsdp2-m8-g1"
+    }
+  },
+  "isolation": "selection used SEARCH only; only selected configs were materialized in EVALUATION after selections froze"
+}

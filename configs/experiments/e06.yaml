@@ -1,0 +1,2 @@
+experiment: E06
+ablations: [full, minus_topology, minus_nccl, minus_runtime, minus_guard_gates]

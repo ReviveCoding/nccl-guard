@@ -1,0 +1,4 @@
+experiment: E01
+scope: linux_nccl_collectives
+operations: [all_reduce, all_gather, reduce_scatter, alltoall]
+gpu_counts: [2, 4, 8]

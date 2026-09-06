@@ -1,0 +1,12 @@
+{
+  "name": "wikitext103",
+  "source": "Salesforce/wikitext",
+  "revision": "main/viewer-offset-0",
+  "license": "CC BY-SA (dataset metadata says 3.0; current card text says 4.0)",
+  "bytes": 25875,
+  "rows": 100,
+  "tokens": 4719,
+  "sha256": "413f38e81545d3666dd44365713fb20c78bc173b213be526e750b18d9e108ee8",
+  "transform_version": "v1",
+  "seed": 17
+}

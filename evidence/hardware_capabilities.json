@@ -1,0 +1,77 @@
+{
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "physical_cores": 24,
+  "logical_cores": 32,
+  "ram_bytes": 34086969344,
+  "powershell_version": "7.6.5",
+  "gpu": {
+    "count": 1,
+    "available": true,
+    "name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "total_vram": 17170956288,
+    "compute_capability": [
+      8,
+      9
+    ]
+  },
+  "nvidia_smi": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 16048, 610.62, [N/A], 31.01, 66, 1455, 0",
+  "gpu_telemetry": [
+    {
+      "name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+      "memory_total_mib": "16376",
+      "memory_free_mib": "16048",
+      "driver_version": "610.62",
+      "power_limit_w": "[N/A]",
+      "power_draw_w": "31.01",
+      "temperature_c": "66",
+      "sm_clock_mhz": "1455",
+      "utilization_percent": "0"
+    }
+  ],
+  "torch": "2.14.0+cu132",
+  "torch_cuda_build": "13.2",
+  "bf16": true,
+  "distributed": {
+    "available": true,
+    "nccl": false,
+    "gloo": true,
+    "nccl_version": null
+  },
+  "tools": {
+    "nsys": null,
+    "mpiexec": null,
+    "ibstat": null,
+    "rdma": null,
+    "all_reduce_perf": null
+  },
+  "topology": "\u001b[4mGPU0\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \t\t\t\tN/A\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks",
+  "native_windows": true,
+  "network_interfaces": [
+    "Bluetooth Network Connection",
+    "Ethernet",
+    "Local Area Connection* 1",
+    "Local Area Connection* 2",
+    "Loopback Pseudo-Interface 1",
+    "Wi-Fi"
+  ],
+  "packages": {
+    "torchrec": {
+      "importable": false,
+      "execution_verified": false
+    },
+    "fbgemm_gpu": {
+      "importable": false,
+      "execution_verified": false
+    },
+    "torchcomms": {
+      "importable": false,
+      "execution_verified": false
+    },
+    "pynvml": {
+      "importable": true,
+      "execution_verified": false
+    }
+  }
+}

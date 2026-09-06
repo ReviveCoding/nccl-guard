@@ -1,0 +1,6 @@
+total_target_gib: 8
+single_download_soft_limit_gib: 2
+synthetic_rows: 4096
+wikitext_rows: 100
+c4_rows: 100
+criteo_rows_target: 2000000

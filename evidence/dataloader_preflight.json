@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "workers": 0,
+      "seconds": 0.0029696999699808657,
+      "batches": 10,
+      "pin_memory": true,
+      "non_blocking": true,
+      "status": "PASS"
+    },
+    {
+      "workers": 2,
+      "seconds": 3.685311899986118,
+      "batches": 10,
+      "pin_memory": true,
+      "non_blocking": true,
+      "status": "PASS"
+    },
+    {
+      "workers": 4,
+      "seconds": 4.965372900012881,
+      "batches": 10,
+      "pin_memory": true,
+      "non_blocking": true,
+      "status": "PASS"
+    },
+    {
+      "workers": 8,
+      "seconds": 7.700843500031624,
+      "batches": 10,
+      "pin_memory": true,
+      "non_blocking": true,
+      "status": "PASS"
+    }
+  ],
+  "selected_workers": 0,
+  "prefetch_factor": 2
+}

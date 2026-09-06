@@ -1,0 +1,3 @@
+budgets: [1, 3, 5, 8]
+guard_primary_budget: 3
+pools: [SEARCH, EVALUATION]

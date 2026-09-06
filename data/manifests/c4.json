@@ -1,0 +1,12 @@
+{
+  "name": "c4",
+  "source": "allenai/c4",
+  "revision": "main/viewer-offset-0",
+  "license": "ODC-BY plus Common Crawl terms",
+  "bytes": 181418,
+  "rows": 100,
+  "tokens": 27689,
+  "sha256": "8b99df554b10186902b41503e78a8a73f3214c396d3a35bb49452bbb2d05967c",
+  "transform_version": "v1",
+  "seed": 17
+}

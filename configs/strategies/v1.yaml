@@ -1,0 +1,5 @@
+torch_compile: false
+ddp_bucket_mb: [12.5, 25, 50, 100]
+fsdp2_variants: [root_only, layer_wise, no_reshard, separate_reduce_scatter]
+tp_degrees: [2, 4]
+guard_candidate_budget: 3

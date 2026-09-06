@@ -1,0 +1,8 @@
+{
+  "name": "criteo",
+  "source": "criteo/CriteoClickLogs",
+  "license": "CC BY-NC-SA 4.0",
+  "status": "SKIP_RESOURCE_BUDGET",
+  "reason": "<HTTPError 500: 'Internal Server Error'>",
+  "max_response_bytes": 52428800
+}

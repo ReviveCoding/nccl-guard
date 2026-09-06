@@ -1,0 +1,3 @@
+experiment: E00
+scope: local_environment_data_model_evidence
+require_cuda: true

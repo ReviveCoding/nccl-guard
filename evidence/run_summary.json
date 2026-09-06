@@ -1,0 +1,264 @@
+{
+  "runs": [
+    {
+      "run": "20260906T053049Z-single-0ee360a0",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "legacy benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "run": "20260906T053540Z-e00-167828d2",
+      "status": "PASS",
+      "reason": "control-path qualification",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053547Z-e01-83ce0393",
+      "status": "SKIP_UNSUPPORTED",
+      "reason": "requires Linux with at least two GPUs; Gloo is not substituted",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053558Z-single-6e3943aa",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "legacy benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "run": "20260906T053605Z-e03-297a9a04",
+      "status": "SKIP_UNSUPPORTED",
+      "reason": "requires Linux with at least two GPUs; Gloo is not substituted",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053613Z-e04-98b4a9e5",
+      "status": "SKIP_UNSUPPORTED",
+      "reason": "requires Linux with at least two GPUs; Gloo is not substituted",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053621Z-e05-a5af40d5",
+      "status": "PASS",
+      "reason": "control-path qualification",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053628Z-e06-95e2843d",
+      "status": "PASS",
+      "reason": "control-path qualification",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053637Z-e07-b26d670c",
+      "status": "SKIP_RESOURCE_BUDGET",
+      "reason": "final bounded C4/Criteo workload not prepared",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053646Z-e08-4a41a9e6",
+      "status": "SKIP_UNSUPPORTED",
+      "reason": "requires Linux with at least two GPUs; Gloo is not substituted",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053653Z-e09-20f91675",
+      "status": "SKIP_UNSUPPORTED",
+      "reason": "requires Linux with at least two GPUs; Gloo is not substituted",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053702Z-e10-c6adc6be",
+      "status": "SKIP_UNSUPPORTED",
+      "reason": "requires Linux with at least two GPUs; Gloo is not substituted",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053712Z-e11-3605f80d",
+      "status": "SKIP_NEEDS_CREDENTIALS",
+      "reason": "TorchTitan isolated validation not configured",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T053721Z-e12-c3039d4e",
+      "status": "SKIP_UNSUPPORTED",
+      "reason": "requires Linux with at least two GPUs; Gloo is not substituted",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T054448Z-single-140195e8",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "timed region included gradient correctness inspection; checksum-valid but not performance evidence"
+    },
+    {
+      "run": "20260906T054610Z-single-1a229780",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "legacy benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "run": "20260906T180358Z-single-abfa9ec4",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "pre-fix benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "run": "20260906T180400Z-single-1533f68f",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "pre-fix benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "run": "20260906T180403Z-single-adb06f71",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "pre-fix benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "run": "20260906T180416Z-sparse-7e59aeb6",
+      "status": "PASS",
+      "performance_claim": true,
+      "claim_scope": "synthetic sparse single-GPU CUDA only",
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "pre-fix sparse benchmark reused one batch while declaring scheduled sample identities"
+    },
+    {
+      "run": "20260906T180430Z-e05-72fdde18",
+      "status": "PASS",
+      "reason": "deterministic offline nested SEARCH/EVALUATION protocol simulation",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "pre-fix simulation materialized EVALUATION observations before method selections froze"
+    },
+    {
+      "run": "20260906T180434Z-e06-142324c3",
+      "status": "PASS",
+      "reason": "deterministic offline planner-ablation simulation",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": true,
+      "exclusion_reason": "pre-fix simulation materialized EVALUATION observations before method selections froze"
+    },
+    {
+      "run": "20260906T180706Z-single-26fa9c9f",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T180709Z-single-a6728ac6",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T180711Z-single-20f2d8a4",
+      "status": "PASS",
+      "performance_claim": true,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T180718Z-sparse-844527b9",
+      "status": "PASS",
+      "performance_claim": true,
+      "claim_scope": "synthetic sparse single-GPU CUDA only",
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T180957Z-e00-25022d86",
+      "status": "PASS",
+      "reason": "local environment/data/model/evidence qualification",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T181530Z-e05-59ceeece",
+      "status": "PASS",
+      "reason": "deterministic offline nested SEARCH/EVALUATION protocol simulation",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T181535Z-e06-be12ae23",
+      "status": "PASS",
+      "reason": "deterministic offline planner-ablation simulation",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "run": "20260906T182505Z-e00-22b8b73d",
+      "status": "PASS",
+      "reason": "local environment/data/model/evidence qualification",
+      "performance_claim": false,
+      "artifact_integrity": "PASS",
+      "scientifically_excluded": false,
+      "exclusion_reason": null
+    }
+  ]
+}

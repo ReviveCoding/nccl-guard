@@ -1,0 +1,7 @@
+name: tiny
+layers: 4
+hidden: 256
+heads: 4
+ffn: 1024
+vocab_size: 50304
+sequence_lengths: [512, 2048, 4096]

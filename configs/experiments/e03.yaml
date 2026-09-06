@@ -1,0 +1,3 @@
+tracks: [iso-workload, practical-optimized]
+torch_compile: false
+precision: bf16

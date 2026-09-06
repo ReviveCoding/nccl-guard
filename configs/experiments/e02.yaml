@@ -1,0 +1,5 @@
+experiment: E02
+scope: local_single_gpu
+warmup_updates: 10
+measured_updates: 50
+launch_blocks: 3

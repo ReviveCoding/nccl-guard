@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "model_restored": true,
+  "optimizer_state_entries": 12,
+  "global_step": 1,
+  "data_cursor": 16,
+  "dataset_fingerprint": "dataset-hash",
+  "config_fingerprint": "f7e26f40bdefa3c016ead550af3c8feb78b3a07f6ed06be08519029bfb83500b",
+  "rng_captured": true,
+  "rng_restored": true,
+  "scheduler_restored": true,
+  "checkpoint": "artifacts/local-checkpoint-025335ba",
+  "checkpoint_sha256_manifest": "artifacts\\local-checkpoint-025335ba\\sha256_manifest.json"
+}

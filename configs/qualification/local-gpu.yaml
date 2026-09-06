@@ -1,0 +1,4 @@
+require_gpu: true
+budget_minutes: 180
+max_download_gb: 2
+authoritative_distributed: false

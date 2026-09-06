@@ -1,0 +1,4 @@
+platform: windows
+gpu_count: 1
+allowed_claim_scope: single_gpu_cuda
+forbidden_substitute: gloo_for_nccl

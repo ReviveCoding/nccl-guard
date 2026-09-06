@@ -1,0 +1,2 @@
+experiment: E04
+variants: [root_only, layer_wise, no_reshard, separate_reduce_scatter]

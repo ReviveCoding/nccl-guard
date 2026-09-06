@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "evidence_kind": "DETERMINISTIC_OFFLINE_PLANNER_ABLATION_SIMULATION",
+  "performance_claim": false,
+  "ablations": {
+    "FULL": [
+      "ddp-m1-g8",
+      "fsdp2-m1-g8",
+      "ddp-m2-g4"
+    ],
+    "minus_topology": [
+      "ddp-m2-g4",
+      "fsdp2-m1-g8",
+      "ddp-m1-g8"
+    ],
+    "minus_nccl_microbenchmark": [
+      "fsdp2-m1-g8",
+      "ddp-m2-g4",
+      "ddp-m1-g8"
+    ],
+    "minus_runtime_profile": [
+      "ddp-m1-g8",
+      "ddp-m2-g4",
+      "fsdp2-m1-g8"
+    ],
+    "minus_guard_gates": [
+      "ddp-m1-g8",
+      "fsdp2-m1-g8",
+      "ddp-m2-g4",
+      "invalid-candidate-demonstration"
+    ]
+  },
+  "note": "control-logic coverage only; contribution claims require real SEARCH/EVALUATION runs"
+}

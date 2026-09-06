@@ -1,0 +1,12 @@
+{
+  "name": "synthetic-dense",
+  "source": "deterministic generator",
+  "revision": "v1",
+  "license": "CC0",
+  "bytes": 1056768,
+  "rows": 4096,
+  "tokens": 528384,
+  "sha256": "1fb776fe12b773d3a0739b06acdd4e96affcdb1e0232046d89a8c87e240e0da2",
+  "transform_version": "v1",
+  "seed": 17
+}

@@ -1,0 +1,7 @@
+name: large
+layers: 32
+hidden: 1536
+heads: 24
+ffn: 6144
+vocab_size: 50304
+sequence_lengths: [512, 2048, 4096]

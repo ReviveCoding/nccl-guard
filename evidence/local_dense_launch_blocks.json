@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "warmup_updates": 10,
+  "measured_updates": 50,
+  "benchmark_semantics_version": 2,
+  "launches": [
+    {
+      "run_id": "20260906T180706Z-single-26fa9c9f",
+      "status": "PASS",
+      "tokens_per_second": 10025.062393064938,
+      "update_time_mean_s": 0.02553600067138672,
+      "temperature_before_after": [
+        "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 16048, 610.62, [N/A], 31.93, 69, 1455, 0",
+        "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 15659, 610.62, [N/A], 33.44, 69, 1455, 11"
+      ]
+    },
+    {
+      "run_id": "20260906T180709Z-single-a6728ac6",
+      "status": "PASS",
+      "tokens_per_second": 10687.916207000319,
+      "update_time_mean_s": 0.02395228359222412,
+      "temperature_before_after": [
+        "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 15659, 610.62, [N/A], 32.67, 69, 1455, 0",
+        "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 15659, 610.62, [N/A], 33.62, 69, 1455, 9"
+      ]
+    },
+    {
+      "run_id": "20260906T180711Z-single-20f2d8a4",
+      "status": "PASS",
+      "tokens_per_second": 10603.671233566576,
+      "update_time_mean_s": 0.024142581787109374,
+      "temperature_before_after": [
+        "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 15659, 610.62, [N/A], 32.78, 69, 1455, 0",
+        "NVIDIA GeForce RTX 4090 Laptop GPU, 16376, 15659, 610.62, [N/A], 31.32, 69, 615, 21"
+      ]
+    }
+  ],
+  "tokens_per_second": {
+    "n_launches": 3,
+    "mean": 10438.883277877278,
+    "median": 10603.671233566576,
+    "ci95_low": 10025.062393064938,
+    "ci95_high": 10687.916207000319
+  },
+  "statistical_unit": "independent process/function launch block",
+  "claim_note": "single-configuration characterization; not a comparative speed claim"
+}

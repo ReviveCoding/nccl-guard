@@ -1,0 +1,128 @@
+{
+  "schema_version": 2,
+  "recovered_after_crash": true,
+  "current_phase": "local_completion",
+  "current_phase_name": "complete_with_external_distributed_gates",
+  "completed_phases": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+  "phase_classification": {
+    "0": "COMPLETE_VALID",
+    "1": "COMPLETE_VALID",
+    "2": "COMPLETE_VALID",
+    "3": "COMPLETE_VALID",
+    "4": "COMPLETE_VALID",
+    "5": "COMPLETE_VALID",
+    "6": "COMPLETE_VALID",
+    "7": "COMPLETE_VALID",
+    "8": "COMPLETE_VALID",
+    "9": "COMPLETE_VALID",
+    "10": "COMPLETE_VALID",
+    "11": "COMPLETE_VALID",
+    "12": "COMPLETE_VALID",
+    "13": "COMPLETE_VALID",
+    "14": "COMPLETE_VALID",
+    "15": "COMPLETE_VALID",
+    "16": "COMPLETE_VALID",
+    "17": "COMPLETE_VALID",
+    "18": "COMPLETE_VALID",
+    "19": "COMPLETE_VALID",
+    "20": "COMPLETE_VALID",
+    "21": "COMPLETE_VALID"
+  },
+  "invalid_partial": [],
+  "scientifically_excluded_artifacts": [
+    {
+      "path": "artifacts/20260906T053049Z-single-0ee360a0",
+      "reason": "legacy benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "path": "artifacts/20260906T053558Z-single-6e3943aa",
+      "reason": "legacy benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "path": "artifacts/20260906T054448Z-single-140195e8",
+      "reason": "timed region included gradient correctness inspection; checksum-valid but not performance evidence"
+    },
+    {
+      "path": "artifacts/20260906T054610Z-single-1a229780",
+      "reason": "legacy benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "path": "artifacts/local-profiler",
+      "reason": "legacy mutable profiler path superseded by immutable local-profiler-e79500ea"
+    },
+    {
+      "path": "artifacts/local-profiler-e79500ea",
+      "reason": "superseded profiler trace lacked a SHA manifest; replacement is local-profiler-626bc5f6"
+    },
+    {
+      "path": "artifacts/local-checkpoint-7124ed6d",
+      "reason": "superseded recovery check lacked a SHA manifest; replacement is local-checkpoint-025335ba"
+    },
+    {
+      "path": "artifacts/20260906T180358Z-single-abfa9ec4",
+      "reason": "pre-fix benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "path": "artifacts/20260906T180400Z-single-1533f68f",
+      "reason": "pre-fix benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "path": "artifacts/20260906T180403Z-single-adb06f71",
+      "reason": "pre-fix benchmark reused one batch while declaring unique scheduled sample IDs"
+    },
+    {
+      "path": "artifacts/20260906T180416Z-sparse-7e59aeb6",
+      "reason": "pre-fix sparse benchmark reused one batch while declaring scheduled sample identities"
+    },
+    {
+      "path": "artifacts/20260906T180430Z-e05-72fdde18",
+      "reason": "pre-fix simulation materialized EVALUATION observations before method selections froze"
+    },
+    {
+      "path": "artifacts/20260906T180434Z-e06-142324c3",
+      "reason": "pre-fix simulation materialized EVALUATION observations before method selections froze"
+    }
+  ],
+  "crash_integrity": {
+    "json_files_validated": 315,
+    "parquet_files_validated": 42,
+    "sha256_manifests_validated": 32,
+    "damaged_files": 0,
+    "active_prior_python_or_cuda_processes": 0
+  },
+  "last_successful_command": "build plus clean-wheel CLI/import smoke and final artifact integrity audit",
+  "next_command": "bash scripts/linux/run_single_node_8gpu.sh on an exclusive Linux NCCL host",
+  "environment": {
+    "python": "3.11.9",
+    "torch": "2.14.0+cu132",
+    "cuda_build": "13.2",
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "compute_capability": "8.9",
+    "bf16_supported": true,
+    "driver": "610.62"
+  },
+  "dataset_status": "synthetic,wikitext103,c4 PASS; criteo SKIP_RESOURCE_BUDGET",
+  "quality": {
+    "ruff": "PASS",
+    "mypy_modules": 49,
+    "pytest_tests": 38,
+    "build": "PASS",
+    "clean_wheel_smoke": "PASS",
+    "linux_shell_syntax": "PASS",
+    "powershell_syntax": "PASS"
+  },
+  "local_evidence": {
+    "dense_launches": 3,
+    "dense_median_tokens_per_second": 10603.671233566576,
+    "sparse_samples_per_second": 8004.119704632369,
+    "profiler": "ECR_APPROX",
+    "checkpoint_application_state": "PASS"
+  },
+  "skipped_execution": [
+    {"scope": "NCCL/multi-GPU/multi-node", "status": "SKIP_UNSUPPORTED"},
+    {"scope": "Criteo bounded acquisition", "status": "SKIP_RESOURCE_BUDGET"},
+    {"scope": "TorchTitan", "status": "SKIP_NEEDS_CREDENTIALS"}
+  ],
+  "planner_freeze_state": "CREATED",
+  "final_confirmation_state": "NOT_STARTED"
+}

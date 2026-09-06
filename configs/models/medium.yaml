@@ -1,0 +1,7 @@
+name: medium
+layers: 24
+hidden: 1024
+heads: 16
+ffn: 4096
+vocab_size: 50304
+sequence_lengths: [512, 2048, 4096]
