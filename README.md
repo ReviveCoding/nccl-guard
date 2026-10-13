@@ -166,3 +166,5 @@ qualification. No license has been selected for this repository.
 2. Collect rank-local Nsight timelines and promote eligible overlap measurements to `ECR_AUTH`.
 3. Run untouched distributed evaluation and controlled elastic recovery experiments.
 4. Extend qualification to an explicitly documented multi-node fabric and topology.
+
+The [scientific protocol](docs/SCIENTIFIC_PROTOCOL.md) records hardware restrictions, scaling semantics, benchmark fairness requirements, and checkpoint validity criteria.
