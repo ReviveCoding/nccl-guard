@@ -1,16 +1,12 @@
-# NCCL-Guard Repository Instructions
+# NCCL-Guard: Scientific Protocol
 
-## Mission
-Implement NCCL-Guard as an evidence-backed distributed-training
-characterization, tuning, and reliability research framework.
-
-Implement and test rather than merely planning.
+This protocol records the experimental assumptions, safety limits, and numerical checks for the distributed-training study. It is separate from implementation instructions for automated agents.
 
 ## Machine and safety boundary
 - Work inside this repository.
 - Do not modify drivers, BIOS, system CUDA, WSL, or unrelated files.
 - Do not provision paid cloud resources.
-- Do not push or publish unless explicitly requested later.
+- Publish experimental claims only with verified artifacts and appropriately scoped limitations.
 - Prefer repository-local environments and caches.
 - Use network/package permissions only when required.
 
@@ -78,8 +74,8 @@ Do not download full C4 or full large Criteo corpora.
 Record source revision, terms/license, hashes, transformations, and row/token counts.
 Do not silently substitute another dataset when credentials or terms block access.
 
-## Review loop
-Before completion:
+## Verification protocol
+Before reporting results:
 1. inspect current official APIs for all version-sensitive paths,
 2. run formatting/lint/type/tests/package checks,
 3. run every genuinely supported local experiment,
