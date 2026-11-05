@@ -3,8 +3,9 @@ from __future__ import annotations
 import argparse
 import json
 import math
-from hashlib import sha256
 from pathlib import Path
+
+from nccl_guard.hashing import file_sha256
 
 
 def compare(reference: Path, recovered: Path) -> dict[str, object]:
@@ -48,7 +49,7 @@ def compare(reference: Path, recovered: Path) -> dict[str, object]:
     comparison = recovered / "reference_comparison.json"
     comparison.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     hashes = {
-        item.name: sha256(item.read_bytes()).hexdigest()
+        item.name: file_sha256(item)
         for item in sorted(recovered.iterdir())
         if item.is_file() and item.name != "sha256_manifest.json"
     }

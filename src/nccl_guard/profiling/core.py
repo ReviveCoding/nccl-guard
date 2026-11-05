@@ -3,11 +3,12 @@ from __future__ import annotations
 import json
 from collections.abc import Iterator
 from contextlib import contextmanager
-from hashlib import sha256
 from pathlib import Path
 from typing import Any
 
 import torch
+
+from nccl_guard.hashing import file_sha256
 
 
 @contextmanager
@@ -28,7 +29,7 @@ def profile_cuda_step(path: Path, step: Any) -> dict[str, object]:
     p.export_chrome_trace(str(trace))
     manifest = path / "sha256_manifest.json"
     manifest.write_text(
-        json.dumps({trace.name: sha256(trace.read_bytes()).hexdigest()}, indent=2) + "\n",
+        json.dumps({trace.name: file_sha256(trace)}, indent=2) + "\n",
         encoding="utf-8",
     )
     return {
