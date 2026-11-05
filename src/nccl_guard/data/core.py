@@ -7,6 +7,8 @@ from pathlib import Path
 
 import numpy as np
 
+from nccl_guard.hashing import file_sha256
+
 
 def stable_bucket(value: str, buckets: int, key: bytes = b"nccl-guard-v1") -> int:
     if buckets <= 0:
@@ -41,7 +43,7 @@ def prepare_synthetic(
     rng = np.random.default_rng(17)
     values = rng.integers(0, vocab, size=(rows, seq + 1), dtype=np.uint16)
     values.tofile(path)
-    digest = sha256(path.read_bytes()).hexdigest()
+    digest = file_sha256(path)
     manifest = DatasetManifest(
         "synthetic-dense",
         "deterministic generator",
@@ -59,7 +61,7 @@ def prepare_synthetic(
 def verify_manifest(root: Path, manifest_path: Path) -> bool:
     record = json.loads(manifest_path.read_text(encoding="utf-8"))
     data_path = root / "data" / "processed" / "synthetic_dense_v1.bin"
-    return data_path.exists() and sha256(data_path.read_bytes()).hexdigest() == record["sha256"]
+    return data_path.exists() and file_sha256(data_path) == record["sha256"]
 
 
 @dataclass(frozen=True)

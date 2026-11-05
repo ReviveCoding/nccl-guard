@@ -8,6 +8,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from nccl_guard.data.core import DatasetManifest
+from nccl_guard.hashing import file_sha256
 from nccl_guard.status import Status
 
 DATASETS = {
@@ -139,7 +140,7 @@ def verify_external(root: Path) -> dict[str, dict[str, Any]]:
         valid = (
             data_path.is_file()
             and data_path.stat().st_size == manifest.get("bytes")
-            and sha256(data_path.read_bytes()).hexdigest() == manifest.get("sha256")
+            and file_sha256(data_path) == manifest.get("sha256")
         )
         results[name] = {
             "status": Status.PASS if valid else Status.FAIL,

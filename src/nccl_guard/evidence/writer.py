@@ -4,9 +4,10 @@ import json
 import uuid
 from contextlib import AbstractContextManager
 from datetime import UTC, datetime
-from hashlib import sha256
 from pathlib import Path
 from typing import Any
+
+from nccl_guard.hashing import file_sha256
 
 
 class RunWriter(AbstractContextManager["RunWriter"]):
@@ -29,9 +30,7 @@ class RunWriter(AbstractContextManager["RunWriter"]):
         entries = {}
         for path in sorted(self.path.rglob("*")):
             if path.is_file() and path.name != "sha256_manifest.json":
-                entries[path.relative_to(self.path).as_posix()] = sha256(
-                    path.read_bytes()
-                ).hexdigest()
+                entries[path.relative_to(self.path).as_posix()] = file_sha256(path)
         manifest = self.json("sha256_manifest.json", entries)
         self.finalized = True
         return manifest
@@ -44,6 +43,6 @@ class RunWriter(AbstractContextManager["RunWriter"]):
 def verify_run(path: Path) -> bool:
     manifest = json.loads((path / "sha256_manifest.json").read_text(encoding="utf-8"))
     return all(
-        (path / name).exists() and sha256((path / name).read_bytes()).hexdigest() == digest
+        (path / name).exists() and file_sha256(path / name) == digest
         for name, digest in manifest.items()
     )

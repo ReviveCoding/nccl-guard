@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import json
 import uuid
-from hashlib import sha256
 from pathlib import Path
 
 import torch
 
 from nccl_guard.config.core import ModelConfig
+from nccl_guard.hashing import file_sha256
 from nccl_guard.models.dense.transformer import canonical_model, state_fingerprint
 from nccl_guard.recovery.state import ApplicationState, dcp_load, dcp_save
 
@@ -29,9 +29,7 @@ def main() -> int:
     dcp_save(checkpoint, model, optimizer, app)
     checkpoint_path = Path(checkpoint)
     hashes = {
-        item.name: sha256(item.read_bytes()).hexdigest()
-        for item in sorted(checkpoint_path.iterdir())
-        if item.is_file()
+        item.name: file_sha256(item) for item in sorted(checkpoint_path.iterdir()) if item.is_file()
     }
     manifest_path = checkpoint_path / "sha256_manifest.json"
     manifest_path.write_text(json.dumps(hashes, indent=2) + "\n", encoding="utf-8")
